@@ -1,0 +1,58 @@
+.dummy > input {
+    border: none !important;
+    border-bottom: 1px solid #cecece !important;
+  }
+  .dummy > input:hover {
+    border: none !important;
+    border-bottom: 1px solid #2079f6 !important;
+  }
+  .dummy > input:focus {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #2079f6 !important;
+  }
+
+  .dummy > span > input {
+    border: none !important;
+    border-bottom: 1px solid #cecece !important;
+  }
+  .dummy > .ant-input-affix-wrapper >  input:hover {
+    border: none !important;
+    border-bottom: 1px solid #2079f6 !important;
+  }
+  .dummy > .ant-input-affix-wrapper >  input:focus {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #2079f6 !important;
+  }
+
+  .dummy > span {
+    border: none !important;
+    border-bottom: none !important;
+  }
+  .header {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 180%;
+    /* identical to box height, or 58px */
+  
+    color: #000000;
+    letter-spacing: 0.01em;
+  }
+  .subHeader {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 28px;
+    /* or 175% */
+  
+    text-align: center;
+  
+    /* Dark Grey */
+  
+    color: #717b8a;
+    margin: 2px 0 55px 0;
+  }

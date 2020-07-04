@@ -1,0 +1,88 @@
+.Table{
+	width: 70%;
+	padding:10px;
+	border-collapse: collapse;
+	margin: 3% 15%;
+}
+
+.Table,.Th,.Td{
+	border: 1px solid;
+	height: 30px;
+}
+.Th{
+	background-color: dodgerblue;
+}
+.Th,.Td{
+	text-align: center;
+	padding: 10px;
+}
+.Td{
+	vertical-align: bottom;
+}
+.Tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.Caption{
+	font-size: 30px;
+	font-weight: bold;
+	color: green;
+	/*border:2px solid green;*/
+	text-align: center;
+	margin: 3% 30%;
+
+}
+
+.header {
+	width: 100%;
+	/* text-align: center; */
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 180%;
+	/* identical to box height, or 58px */
+  
+	color: #000000;
+	letter-spacing: 0.01em;
+  }
+  .smallHeader{
+	width: 100%;
+	/* text-align: center; */
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 180%;
+	/* identical to box height, or 58px */
+  
+	color: #000000;
+	letter-spacing: 0.01em;
+  }
+  .smallerHeader{
+	width: 100%;
+	/* text-align: center; */
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 180%;
+	/* identical to box height, or 58px */
+  
+	color: #000000;
+	letter-spacing: 0.01em;
+  }
+  .paraStyle{
+	width: 100%;
+	/* text-align: center; */
+	font-size: 12px;
+	font-weight: normal;
+  }
+  .subHeader {
+	width: 100%;
+	/* text-align: center; */
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 28px;
+	/* or 175% */
+  
+	/* text-align: center; */
+  
+	/* Dark Grey */
+  
+	color: #717b8a;
+	margin: -7px 0 55px 0;
+  }

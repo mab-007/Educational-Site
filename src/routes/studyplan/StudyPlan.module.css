@@ -1,0 +1,90 @@
+.header {
+    width: 100%;
+    /* text-align: center; */
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 180%;
+    /* identical to box height, or 58px */
+  
+    color: #000000;
+    letter-spacing: 0.01em;
+  }
+  .smallHeader{
+    width: 100%;
+    /* text-align: center; */
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 180%;
+    /* identical to box height, or 58px */
+  
+    color: #000000;
+    letter-spacing: 0.01em;
+  }
+  .smallerHeader{
+    width: 100%;
+    /* text-align: center; */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    /* identical to box height, or 58px */
+  
+    color: #000000;
+    letter-spacing: 0.01em;
+  }
+ .paraStyle{
+    width: 100%;
+    /* text-align: center; */
+    font-size: 12px;
+    font-weight: normal;
+}
+  .subHeader {
+    width: 100%;
+    /* text-align: center; */
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 28px;
+    /* or 175% */
+  
+    /* text-align: center; */
+  
+    /* Dark Grey */
+  
+    color: #717b8a;
+    margin: -7px 0 55px 0;
+  }
+  .descriptionArea{
+      width: 100%;
+      margin: 50px 0;
+  }
+  .inProgressList , .completedList, .notStartedList{
+      margin: 10px 0;
+      font-size: 12px;
+  }
+ul .ant-card-actions{
+    background: none !important;
+}
+.inputFieldWrapper{
+    margin: 15px 0;
+}
+input .ant-input{
+    border: none !important;
+}
+.inputLabel{
+    font-size: 14px;
+    color: #717b8a;
+    margin-bottom: 7.5px;;
+
+}
+.newItemInput > input {
+    border: none !important;
+    border-bottom: 1px solid #cecece !important;
+  }
+  .newItemInput > input:hover {
+    border: none !important;
+    border-bottom: 1px solid #2079f6 !important;
+  }
+  .newItemInput > input:focus {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #2079f6 !important;
+  }

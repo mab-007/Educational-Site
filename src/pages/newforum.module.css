@@ -1,0 +1,22 @@
+.postContainer {
+    width: 100%;
+    /* margin: 25px auto;*/
+    background: white;
+    /* border-radius: 10px;
+    box-shadow: 3px 4px 7px -5px rgba(95, 93, 93, 0.75); */
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+.postContainer:hover {
+    box-shadow: 3px 4px 7px 5px rgba(223, 221, 221, 0.75);
+    border-radius: 10px;
+    transform: scale(1.05);
+  }
+
+  .titleWrapper {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  

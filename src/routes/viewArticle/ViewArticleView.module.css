@@ -1,0 +1,125 @@
+.pageWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton {
+  width: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(127, 127, 199);
+  color: white;
+  font-weight: 600;
+  border-radius: 2px;
+  float: right;
+  cursor: pointer;
+  margin-bottom: -15px;
+  z-index: 2;
+}
+.resultsWrapper {
+  width: 50% !important;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.outputArea {
+  width: 100%;
+  height: 30%;
+  background: rgb(243, 239, 239);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.articleWrapper {
+  width: 100%;
+  background: white;
+  height: 70%;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.editorWrapper {
+  width: 50%;
+  height: 100%;
+}
+.articleHeader {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  line-height: 180%;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+.articleMetadata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: rgb(156, 156, 156);
+}
+.header {
+  width: 100%;
+  /* text-align: center; */
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 180%;
+  /* identical to box height, or 58px */
+
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+.smallHeader{
+  width: 100%;
+  /* text-align: center; */
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 180%;
+  /* identical to box height, or 58px */
+
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+.smallerHeader{
+  width: 100%;
+  /* text-align: center; */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 180%;
+  /* identical to box height, or 58px */
+
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+.paraStyle{
+  width: 100%;
+  /* text-align: center; */
+  font-size: 12px;
+  font-weight: normal;
+}
+.subHeader {
+  width: 100%;
+  /* text-align: center; */
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 28px;
+  /* or 175% */
+
+  /* text-align: center; */
+
+  /* Dark Grey */
+
+  color: #717b8a;
+  margin: -7px 0 55px 0;
+}
