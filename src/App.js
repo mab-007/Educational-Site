@@ -129,6 +129,7 @@ function App() {
             }}
           >
             <Router>
+              <Redirect from="/" to="/home"/>
               <Switch>
                 <ProtectedRoute path="/edit" component={EditArticleView} />
                 <ProtectedRoute path="/view" component={ViewArticleView} />
