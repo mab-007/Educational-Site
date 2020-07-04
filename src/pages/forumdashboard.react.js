@@ -200,9 +200,9 @@ const ForumDashboard = props => {
                   </div>
                 );
               })}
-              <Empty/>
+              
         </Card><br/>       
-        <br/><br/> 
+        <br/>
 
         <Button onClick={submithandler} className="btn btn-lg btn-primary">New topic</Button>
         </div>         

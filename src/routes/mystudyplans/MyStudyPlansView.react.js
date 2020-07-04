@@ -183,7 +183,51 @@ const MyStudyPlanView = props => {
             </>
             :
             <div>
-                Nothing found
+                <Button type="dashed" style={{ width: "500px", height: "250px", margin: "15px", background: "#f8f9fb" }}
+                                onClick={handleOpenCreateNewItemModal}
+                            >
+                                <div style={{ fontSize: "32px", color: "rgb(94, 147, 173)" }}>
+                                    <PlusCircleOutlined />
+                                </div>
+                                <br />
+                                <div className={s.smallerHeader}>
+                                    Add a new Study Plan
+                            </div>
+                            </Button>
+               <Modal
+                    title="Add a new study item!"
+                    visible={isOpenCreationModal}
+                    centered
+                    onOk={handleOpenCreateNewItemModal}
+                    onCancel={handleOpenCreateNewItemModal}
+                    footer={null}
+                    destroyOnClose={true}
+                >
+                    <div className={s.paraStyle}>
+                        Create a new group study plan. After creation, add your friends and set common goals and deadlines and work together to achieve them!
+                </div>
+                    <br />
+                    <div className={`inputFieldWrapper ${s.inputFieldWrapper}`}>
+                        <div className={s.inputLabel}>
+                            Title
+                    </div>
+                        <div className={s.newItemInput}>
+                            <Input
+                                className={s.newItemInput} onChange={handleTitleChange} value={title} />
+                        </div>
+                    </div>
+                    <div className={`inputFieldWrapper ${s.inputFieldWrapper}`}>
+                        <div className={s.inputLabel}>
+                            Description
+                    </div>
+                        <div className={s.newItemInput}>
+                            <Input
+                                className={s.newItemInput} onChange={handleDescriptionChange} value={description} />
+                        </div>
+                    </div>
+                    <br />
+                    <Button type="primary" centered onClick={handleCreateNewItem}>Create new Group Study Plan!</Button>
+                </Modal>
         </div>
     )
 }

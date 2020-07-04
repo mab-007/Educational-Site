@@ -112,7 +112,7 @@ const SignIn = (props) => {
     return (
         // authData && authData.accessToken? <Redirect to = "/dashboard"/>
         // :
-        authData && authData.accessToken && !authData.isLoading ? <Redirect to="/home" />
+        authData && authData.accessToken && !authData.isLoading ? <Redirect to="/" />
             : authData.isLoading ? <div /> :
                 <div>
                     <Card hoverable style={style}>

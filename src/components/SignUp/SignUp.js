@@ -15,10 +15,10 @@ class SignUp extends Component {
         email: "",
         password: "",
         rePassword: "",
-        designation: "",
+        designation: "student",
         university: "",
         year: "",
-        educatorStatus: null,
+        educatorStatus: "no",
         firstNameErr: "",
         lastNameErr: "",
         emailErr: "",
@@ -161,7 +161,7 @@ class SignUp extends Component {
                 lastName: obj.lastName,
                 email: obj.email,
                 password: obj.password,
-                designation: "student",
+                designation: obj.designation,
                 university: obj.university,
                 qualification: obj.qualification,
                 year: obj.year,
@@ -197,7 +197,8 @@ class SignUp extends Component {
         console.log(e.target.checked);
         this.setState({
             ...this.state,
-            educatorStatus: e.target.checked ? "pending" : null,
+            educatorStatus: e.target.checked ? "pending" : "no",
+            designation: e.target.checked ? "tutor" : "student",
         })
     }
     yearHandler = (date, dateString) => {

@@ -64,7 +64,7 @@ function SideBar() {
         selectedKeys={[activeItem]}
         mode="inline"
         style={{ height: "100%", borderRight: 0 }}
-      ><div className={s.logo}>LOGO</div>
+      ><div className={s.logo}>CATALOG</div>
         <Menu.Item key="2" onClick={e=>window.location="/dashboard"}>
           <FileTextOutlined />
           <span>Dashboard</span>

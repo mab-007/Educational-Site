@@ -76,7 +76,7 @@ const EditArticleView = props => {
   }, []);
 
   return (
-    authData.user && authData.user.educatorStatus!=="approved" ?<Redirect to="/dashboard" />
+    authData.user && authData.user.educatorStatus!=="pending" ?<Redirect to="/dashboard" />
     :
     <Card className={s.wrapper} bodyStyle={{ padding: 45 }}>
        <div style={{ position: "absolute", top: "-100px", left: "-50px" }}>
