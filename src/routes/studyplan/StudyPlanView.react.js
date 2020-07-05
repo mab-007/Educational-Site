@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useMemo } from "react";
 import s from "./StudyPlan.module.css";
-import { Card, Button, Input, Divider, Avatar, List, Modal, Row, Col, Tag, Select, message } from "antd";
+import { Card, Button, Input, Divider, Avatar, Modal, Row, Col, Tag, Select, message } from "antd";
 import { Typography } from "antd";
 import { AuthContext } from "../../App";
 import queryString from "query-string";

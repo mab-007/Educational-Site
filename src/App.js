@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import s from "./App.module.css";
-import { BrowserRouter as Router, Switch, Route, Redirect, useHistory, withRouter} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory, withRouter} from "react-router-dom";
 import EditArticleView from "./routes/editArticle";
 import ViewArticleView from "./routes/viewArticle";
 import Mainpage from "./pages/index";

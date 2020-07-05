@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import s from "./ForumDashboard.module.css";
-import { Row, Col, Card, Tag, Select, Button, Avatar, Divider, Input, Breadcrumb, message, Empty } from "antd";
+import { Row, Col, Card, Tag, Select, Button, Avatar, Divider, Input, Breadcrumb, message } from "antd";
 import { UserOutlined } from '@ant-design/icons';
 import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { AuthContext } from "../App";
 import BreadcrumbItem from "antd/lib/breadcrumb/BreadcrumbItem";
 import articleIcon from "../images/article.svg"
@@ -60,21 +60,21 @@ const ForumDashboard = props => {
     setFilterText(e.target.value);
   };
 
-  const handleSort = value => {
+  /*const handleSort = value => {
     const sortedPosts = [...posts].sort((a, b) =>
       b[value].localeCompare(a[value]),
     );
     setPosts(sortedPosts);
-  };
+  };*/
 
-  const [Current,setCurrent] = React.useState(3);
+  /*const [Current,setCurrent] = React.useState(3);
 
   const onChange = page => {
       console.log(page);
       setCurrent({
         Current: page,
       });
-    };
+    };*/
   
 
   const submithandler = () =>{
@@ -82,7 +82,7 @@ const ForumDashboard = props => {
       window.location.assign("/new_topic");
     }else {message.info("Please signin !")}
   }
-  const { Option } = Select;
+  //const { Option } = Select;
   return (
     <React.Fragment>
       <div className="container my-3">

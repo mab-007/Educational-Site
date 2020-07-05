@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./Editor.module.css";
 import AceEditor from "react-ace";
-import { Ace } from "ace-builds";
 import "ace-builds";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";

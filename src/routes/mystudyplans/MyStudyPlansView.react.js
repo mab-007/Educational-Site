@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useMemo } from "react";
 import s from "./MyStudyPlan.module.css";
-import { Card, Button, Input, Divider, Avatar, List } from "antd";
+import { Card, Button, Input, Divider, Avatar } from "antd";
 import { Typography } from "antd";
 import { AuthContext } from "../../App";
 import { PlusCircleOutlined } from "@ant-design/icons";

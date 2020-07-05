@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import s from "./DashboardView.module.css";
-import { Row, Col, Card, Input, Badge, Select, Divider } from "antd";
+import { Row, Col, Card, Input, Select, Divider } from "antd";
 import Icon, { StarFilled } from "@ant-design/icons";
 import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import BookmarkIcon from "../../bookmark.png";

@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import s from './Leaderboard.module.css';
 import groupBy from 'lodash/groupBy';
 import { AuthContext } from '../../App';

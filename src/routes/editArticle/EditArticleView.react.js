@@ -7,7 +7,6 @@ import { Typography } from "antd";
 import draftToHtml from "draftjs-to-html";
 import writeIcon from "../../images/write.svg";
 
-import { convertFromRaw } from "draft-js";
 import { AuthContext } from "../../App";
 import { Redirect } from "react-router-dom";
 

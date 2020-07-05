@@ -1,5 +1,5 @@
-import React, { Component, useState, useContext, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, NavLink, Redirect } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Switch, Route, NavLink, Redirect } from 'react-router-dom';
 import SignUp from '../SignUp/SignUp';
 import { AuthContext } from '../../App';
 import { Card, Input, Button } from 'antd';
@@ -8,19 +8,12 @@ import s from "./SignIn.module.css";
 import codeIcon from "../../images/code_3.svg";
 
 const SignIn = (props) => {
-    //static authData = AuthContext;
-
-    // componentDidMount(){
-    //     const authData = this.context
-    //     console.log(authData)
-    // }
 
     const authData = useContext(AuthContext)
 
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [designation, setDesignation] = useState("");
     const [emailErr, setEmailErr] = useState("");
     const [passwordErr, setPasswordErr] = useState("");
 

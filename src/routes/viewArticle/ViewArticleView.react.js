@@ -1,12 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import Editor from "../../components/Editor";
 import s from "./ViewArticleView.module.css";
-import { articles } from "../../testArticles";
-import showdown from "showdown";
-import { Divider, Card, Button, Input, Rate, Modal, Row, Col } from "antd";
-import marked from "marked";
+import { Divider, Card, Button, Input, Rate, Modal } from "antd";
 import { withRouter } from "react-router-dom";
-import sampleMarkdownText from "../../testArticles/sampleMarkDown.md";
 import queryString from "query-string";
 import draftToHtml from "draftjs-to-html";
 import { AuthContext } from "../../App";

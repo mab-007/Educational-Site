@@ -2,13 +2,11 @@ import React, { useContext } from 'react';
 import { Card, Divider, Input, Carousel, Row, Button,Tag, Alert } from 'antd';
 import {GithubOutlined, MediumOutlined} from "@ant-design/icons";
 import s from "./homepage.module.css";
-import writeIcon from "../images/write.svg";
 import sliderIcon from "../images/slider-icon.png";
 import leftImage from "../images/left-image.png";
 import rightImage from "../images/right-image.png";
 import { AuthContext } from "../App";
 import emailjs from 'emailjs-com';
-import { setFlavor } from 'showdown';
 
 const { TextArea } = Input;
 
