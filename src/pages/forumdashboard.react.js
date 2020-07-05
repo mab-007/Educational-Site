@@ -26,7 +26,7 @@ const ForumDashboard = props => {
   React.useEffect(() => {
     console.log("FETCHING");
     //if (authData && authData.accessToken) {
-      fetch("http://localhost:5000/topics", {
+      fetch("http://avab-restapi.herokuapp.com/topics", {
         method:"GET",
         withCredentials: true,
         mode:"cors",

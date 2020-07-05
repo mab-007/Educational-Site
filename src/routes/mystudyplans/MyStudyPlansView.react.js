@@ -28,7 +28,7 @@ const MyStudyPlanView = props => {
 
     useEffect(() => {
         if (authData && authData.user)
-            fetch(`http://localhost:5000/studyplan/user/${authData.user.email}`, {
+            fetch(`http://avab-restapi.herokuapp.com/studyplan/user/${authData.user.email}`, {
                 mode: "cors",
                 headers: {
                     'Accept': 'application/json',
@@ -57,7 +57,7 @@ const MyStudyPlanView = props => {
 
     const handleCreateNewItem = async () => {
 
-        const data = await fetch(fetch(`http://localhost:5000/studyplan/`, {
+        const data = await fetch(fetch(`http://avab-restapi.herokuapp.com/studyplan/`, {
             method: "POST",
             mode: "cors",
             headers: {
@@ -73,7 +73,7 @@ const MyStudyPlanView = props => {
                 description: description
             })
         }))
-        const _ = await fetch(`http://localhost:5000/studyplan/user/${authData.user.email}`, {
+        const _ = await fetch(`http://avab-restapi.herokuapp.com/studyplan/user/${authData.user.email}`, {
             mode: "cors",
             headers: {
                 'Accept': 'application/json',
