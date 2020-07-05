@@ -47,7 +47,7 @@ const NewTopic = (props) => {
         
         console.log({title, context});
         if (authData && authData.accessToken) {
-            fetch("http://avab-restapi.herokuapp.com/topics", {
+            fetch("http://localhost:5000/topics", {
                 method: "POST",
                 withCredentials: true,
                 mode:"cors",

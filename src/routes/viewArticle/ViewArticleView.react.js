@@ -18,7 +18,7 @@ const ViewArticleView = props => {
   const onSubmit = async () => {
     try {
       console.log("Posting code");
-      const response = await fetch("http://avab-restapi.herokuapp.com/compile", {
+      const response = await fetch("http://localhost:5000/compile", {
         method: "POST",
         body: JSON.stringify({ code: codeValue }),
       });
@@ -28,7 +28,7 @@ const ViewArticleView = props => {
 
       document.getElementById("outputArea").innerHTML = data;
 
-      const finalResponse = await fetch("http://avab-restapi.herokuapp.com/run");
+      const finalResponse = await fetch("http://localhost:5000/run");
       const answer = await finalResponse.text();
       console.log(answer, " ", finalResponse);
       document.getElementById("outputArea").innerHTML = answer;
@@ -55,7 +55,7 @@ const ViewArticleView = props => {
   React.useEffect(() => {
     const qParams = queryString.parse(props.location.search);
     if (authData && authData.accessToken) {
-      fetch(`http://avab-restapi.herokuapp.com/article/${qParams.id}`, {
+      fetch(`http://localhost:5000/article/${qParams.id}`, {
         method: "GET",
         withCredentials: true,
         mode: "cors",
@@ -76,7 +76,7 @@ const ViewArticleView = props => {
     if (article && article.content) {
       const searchTerm = article.title;
       console.log(article)
-      const data = await fetch(`http://avab-restapi.herokuapp.com/youtube?search=${searchTerm}`, {
+      const data = await fetch(`http://localhost:5000/youtube?search=${searchTerm}`, {
         method: "GET",
         withCredentials: true,
         mode: "cors",
@@ -109,7 +109,7 @@ const ViewArticleView = props => {
 
 
   const handleFeedbackSubmission = () => {
-    fetch(`http://avab-restapi.herokuapp.com/feedback/`, {
+    fetch(`http://localhost:5000/feedback/`, {
       method: "POST",
       mode: "cors",
       headers: {

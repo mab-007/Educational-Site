@@ -143,11 +143,33 @@ function App() {
               </a>
               </Dropdown>&nbsp;&nbsp;&nbsp;&nbsp;
               </div>) : 
-              <div  onClick={e => window.location="/signin"}>
-               <a className="ant-dropdown-link" >
-               Welcome, Sign In!
+             (<div>
+              <Dropdown overlay={menu1} visible={false}>
+              <a className="ant-dropdown-link" onClick={e => window.location="/"}>
+                {'Home'}
               </a>
-              </div>
+            </Dropdown>{' '}&nbsp;&nbsp;&nbsp;&nbsp;
+            <Dropdown overlay={menu2} >
+              <a className="ant-dropdown-link" onClick={e => window.location="/dashboard"}>
+                {'Dashboard'} <DownOutlined />
+              </a>
+            </Dropdown>{' '}&nbsp;&nbsp;&nbsp;&nbsp;
+            <Dropdown overlay={menu1} visible={false}>
+              <a className="ant-dropdown-link" onClick={e => window.location="/forum"}>
+                {'Forum'}
+              </a>
+            </Dropdown>{' '}&nbsp;&nbsp;&nbsp;&nbsp;
+            <Dropdown overlay={menu1} visible={false}>
+              <a className="ant-dropdown-link" onClick={e => window.location="/contest"}>
+                {'Contests'}
+              </a>
+            </Dropdown>{' '}&nbsp;&nbsp;&nbsp;&nbsp;
+            <Dropdown  overlay={menu1} visible={false} onClick={e => window.location="/signin"}>
+             <a className="ant-dropdown-link" >
+             Welcome, Sign In!
+            </a>
+            </Dropdown>
+            </div>)
              
               }
               </div>

@@ -59,7 +59,7 @@ const SignIn = (props) => {
         if (!validate()) {
             return;
         }
-        fetch("http://avab-restapi.herokuapp.com/user/signin", {
+        fetch("http://localhost:5000/user/signin", {
             method: "POST",
             mode: "cors",
             headers: {
@@ -116,7 +116,7 @@ const SignIn = (props) => {
             : authData.isLoading ? <div /> :
                 <div>
                     <Card hoverable style={style}>
-                    <div style={{position:"absolute", top:"-100px", right:"-85px"}}>
+                    <div style={{position:"absolute", top:"-50px", right:"-165px"}}>
                         <img style={{height:"300px", width:"300px"}} src={codeIcon}/>
                     </div>
                         <div className={s.header}>Welcome Back</div>

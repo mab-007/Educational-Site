@@ -151,7 +151,7 @@ class SignUp extends Component {
             year: this.state.year,
             educatorStatus: this.state.educatorStatus,
         };
-        fetch("http://avab-restapi.herokuapp.com/user/signup", {
+        fetch("http://localhost:5000/user/signup", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
