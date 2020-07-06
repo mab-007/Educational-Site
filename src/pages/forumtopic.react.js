@@ -19,7 +19,7 @@ const Forumtopic = props => {
     React.useEffect(() => {
         const qParams = queryString.parse(props.location.search);
         if (authData && authData.accessToken) {
-            fetch(`http://localhost:5000/topics/${qParams.id}`, {
+            fetch(`https://avab-restapi.herokuapp.com/topics/${qParams.id}`, {
                 method:"GET",
                 withCredentials: true,
                 mode:"cors",
@@ -56,7 +56,7 @@ const Forumtopic = props => {
             console.log(comm);
             const qParams = queryString.parse(props.location.search);
             if (authData && authData.accessToken) {
-                fetch(`http://localhost:5000/topics/${qParams.id}`, {
+                fetch(`https://avab-restapi.herokuapp.com/topics/${qParams.id}`, {
                     method: "POST",
                     withCredentials: true,
                     mode:"cors",
@@ -82,7 +82,7 @@ const Forumtopic = props => {
         
         const allComment = () => {
             const qParams = queryString.parse(props.location.search);
-            fetch(`http://localhost:5000/topics/${qParams.id}`, {
+            fetch(`https://avab-restapi.herokuapp.com/topics/${qParams.id}`, {
                 method:"GET",
                 withCredentials: true,
                 mode:"cors",

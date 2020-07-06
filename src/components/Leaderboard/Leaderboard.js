@@ -56,7 +56,7 @@ const Leaderboard = (props) => {
 		//const qParams=queryString.parse(this.location.search);
 		let x = null;
 		if (!article)
-			fetch("http://localhost:5000/article", {
+			fetch(`https://avab-restapi.herokuapp.com/article`, {
 				mode: "cors",
 				headers: {
 					'Accept': 'application/json',

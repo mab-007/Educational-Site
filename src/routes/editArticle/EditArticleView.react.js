@@ -3,7 +3,7 @@ import { Editor } from "react-draft-wysiwyg";
 import s from "./EditArticle.module.css";
 import { Card, Button, Input, Divider, Select } from "antd";
 import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { Typography } from "antd";
+//import { Typography } from "antd";
 import draftToHtml from "draftjs-to-html";
 import writeIcon from "../../images/write.svg";
 
@@ -36,7 +36,7 @@ const EditArticleView = props => {
 
   const handleArticleSubmit = e => {
     console.log("POSTING.....");
-    fetch("http://localhost:5000/article", {
+    fetch(`https://avab-restapi.herokuapp.com/article`, {
       method: "POST",
       mode: "cors",
       headers: {
