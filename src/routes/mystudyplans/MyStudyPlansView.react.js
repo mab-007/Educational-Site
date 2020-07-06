@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useMemo } from "react";
 import s from "./MyStudyPlan.module.css";
-import { Card, Button, Input, Divider, Avatar } from "antd";
+import { Card, Button, Input, Avatar } from "antd";
 import { Typography } from "antd";
 import { AuthContext } from "../../App";
 import { PlusCircleOutlined } from "@ant-design/icons";
@@ -8,7 +8,7 @@ import Modal from "antd/lib/modal/Modal";
 import groupStudyIcon from "../../images/group_study_2.svg";
 import scrumIcom from "../../images/scrum.svg";
 
-const { Title } = Typography;
+//const { Title } = Typography;
 
 const MyStudyPlanView = props => {
 
@@ -115,7 +115,7 @@ const MyStudyPlanView = props => {
                                             <Card hoverable={true} style={{ width: "500px", height: "250px", margin: "15px" }}>
                                                 <Card.Meta
                                                     avatar={<Avatar size="large" src={scrumIcom}/>}
-                                                    title={<a href={`/studyplan?id=${item._id}`} target="_blank">{item.title}</a>}
+                                                    title={<a href={`/studyplan?id=${item._id}`} target="_blank" rel="noopener noreferrer">{item.title}</a>}
                                                     description={
                                                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start" }}>
                                                             <div className={s.smallerText} style={{ textAlign: "left !important" }}>

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import c from "./Contest.module.css";
-import { Row, Col, Card, Tag, Breadcrumb, Tabs, Button } from 'antd';
+import { Row, Col, Card, Tag, Tabs, Button } from 'antd';
 import codechefIcon from "../../images/codechef.jpeg";
 import codeforcesIcon from "../../images/codeforces2.png";
 import topcoderIcon from "../../images/topcoder.png";
@@ -57,7 +57,6 @@ const Contest = props => {
         let x = null;
         let y = null, z = null;
         console.log('Fetching...');
-        const qParams = 1;
         fetch("http://localhost:5000/data/2")
             .then(res => res.json())
             .then(data => {
@@ -103,11 +102,11 @@ const Contest = props => {
 
 
 
-    const [filterText, setFilterText] = React.useState();
+    /*const [filterText, setFilterText] = React.useState();
 
     const handleFilter = e => {
         setFilterText(e.target.value);
-    };
+    };*/
 
     const siteSeclect = (e) => {
         let x = null;
@@ -161,7 +160,7 @@ const Contest = props => {
                                             >
 
                                                 <div className={c.titleWrapper} >
-                                                    <a href={con.href} target="_blank" style={{ textDecoration: "none" }}>
+                                                    <a href={con.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
                                                         {con.event}
                                                     </a>
                                                 </div>
@@ -193,6 +192,7 @@ const Contest = props => {
                                                 <Button>
                                                     <a
                                                         target="_blank"
+                                                        rel="noopener noreferrer"
                                                         style={{ textDecoration: "none" }}
                                                         href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${con.event.replace(/[^a-zA-Z0-9 ]/g, "")}&dates=${new Date(con.start).getTime()}/${new Date(con.end).getTime()}&ctz=India`}>
                                                         Add to Calender 📅
@@ -216,7 +216,7 @@ const Contest = props => {
                                                 xs={{ span: 24, offset: 0 }}
                                             >
                                                 <div className={c.titleWrapper} >
-                                                    <a href={con.href} target="_blank" style={{ textDecoration: "none" }}>
+                                                    <a href={con.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
                                                         {con.event}
                                                     </a>
                                                 </div>
@@ -248,6 +248,7 @@ const Contest = props => {
                                                 <Button>
                                                     <a
                                                         target="_blank"
+                                                        rel="noopener noreferrer"
                                                         style={{ textDecoration: "none" }}
                                                         href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${con.event.replace(/[^a-zA-Z0-9 ]/g, "")}&dates=${new Date(con.start).getTime()}/${new Date(con.end).getTime()}&ctz=India`}>
                                                         Add to Calender 📅

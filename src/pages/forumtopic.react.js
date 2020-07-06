@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import queryString from "query-string";
 import { withRouter } from "react-router-dom";
 import { UserOutlined } from '@ant-design/icons';
@@ -37,7 +37,7 @@ const Forumtopic = props => {
             
             .catch(err => console.error(err));
         }
-    }, []);
+    });
 
         const data = [
             {

@@ -79,7 +79,7 @@ const NewTopic = (props) => {
 
     return (
         <React.Fragment>
-            <Card bodyStyle={{ padding: 15 }} style={{width:"75vw"}} style={{ margin:"45px auto"}} className={s.bodyCard}>
+            <Card bodyStyle={{ padding: 15 }} style={{width:"75vw",  margin:"45px auto"}} className={s.bodyCard}>
             <div style={{ position: "absolute", top: "-100px", left: "-50px" }}>
             <img style={{ height: "250px", width: "250px" }} src={writeIcon} />
             </div>

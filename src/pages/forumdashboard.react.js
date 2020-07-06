@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import s from "./ForumDashboard.module.css";
-import { Row, Col, Card, Tag, Select, Button, Avatar, Divider, Input, Breadcrumb, message } from "antd";
+import { Row, Col, Card, Tag, Button, Avatar, Divider, Input, Breadcrumb, message } from "antd";
 import { UserOutlined } from '@ant-design/icons';
 import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { withRouter } from "react-router-dom";
@@ -88,7 +88,7 @@ const ForumDashboard = props => {
       <div className="container my-3">
       <div className="row">
       <div className="col-12 col-xl">
-        <Card bodyStyle={{ padding: 15 }} style={{width:"75vw"}} style={{ margin:"45px auto"}} className={s.bodyCard}>
+        <Card bodyStyle={{ padding: 15 }} style={{width:"75vw", margin:"45px auto"}} className={s.bodyCard}>
           <div style={{ position: "absolute", top: "-100px", left: "-50px" }}>
             <img style={{ height: "250px", width: "250px" }} src={articleIcon} />
           </div>

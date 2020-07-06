@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import s from "./App.module.css";
-import { BrowserRouter as Router, Switch, Route, useHistory, withRouter} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
+import { Navbar } from 'react-bootstrap';
 import EditArticleView from "./routes/editArticle";
 import ViewArticleView from "./routes/viewArticle";
 import Mainpage from "./pages/index";
@@ -23,7 +24,7 @@ import { Menu, Layout, Dropdown, Card, Row, Divider } from "antd";
 import Leaderboard from './components/Leaderboard/Leaderboard';
 import { DownOutlined, LogoutOutlined, InstagramOutlined,  FacebookOutlined, LinkedinOutlined, TwitterOutlined } from "@ant-design/icons";
 
-const { Content, Sider } = Layout;
+const { Content } = Layout;
 
 export const AuthContext = React.createContext(null);
 
@@ -31,7 +32,7 @@ function App() {
 
   const [authData, setAuthData] = React.useState({ isLoading: true });
 
-  const history = useHistory();
+  //const history = useHistory();
 
   const [user, setUser] = React.useState("");
 
@@ -43,7 +44,7 @@ function App() {
   function getCookie(name) {
     var cookies = '; ' + document.cookie;
     var splitCookie = cookies.split('; ' + name + '=');
-    if (splitCookie.length == 2) return splitCookie.pop();
+    if (splitCookie.length === 2) return splitCookie.pop();
   }
   function deleteCookie(name) {
     console.log("Hello");
@@ -98,8 +99,8 @@ function App() {
         </div>
       </Menu.Item>
       <Menu.Item>
-        <div onClick={e=>window.location="/edit"}>
-          Create
+        <div onClick={e=>window.location="/mystudyplans"}>
+          Study Planer
         </div>
       </Menu.Item>
     </Menu>
@@ -110,10 +111,10 @@ function App() {
       <SideBar/>
       <Layout style={{ padding: "0px" }}>
         <Layout.Header className={`site-layout-sub-header-background ${s.navbar}`} style={{ padding: 0, background:"#1890ff", color:"white",
-      "-webkit-box-shadow": "0px 2px 16px -2px rgba(122,113,122,1)",
-      "-moz-box-shadow": "0px 2px 16px -2px rgba(122,113,122,1)",
-      "box-shadow":" 0px 2px 16px -2px rgba(122,113,122,1)" }} fixed>
-          <navbar mode="horizontal" defaultSelectedKeys={['2']} style={{ float: "right"}} className="navbar-sticky-top">
+      "WebkitBoxShadow": "0px 2px 16px -2px rgba(122,113,122,1)",
+      "MozBoxShadow": "0px 2px 16px -2px rgba(122,113,122,1)",
+      "boxShadow":" 0px 2px 16px -2px rgba(122,113,122,1)" }} fixed = "true">
+          <Navbar mode="horizontal" defaultselectedkeys={['2']} style={{ float: "right"}} className="navbar-sticky-top">
             <div>
               {authData && authData.accessToken ? (
               <div>
@@ -173,7 +174,7 @@ function App() {
              
               }
               </div>
-          </navbar>
+          </Navbar>
         </Layout.Header>
 
 
@@ -207,10 +208,7 @@ function App() {
               </Switch>
             </Router>
             </Content>
-          <Layout.Footer style={{ textAlign: 'center', padding: 0, background: "white",
-      "-webkit-box-shadow": "0px 2px 16px -2px rgba(122,113,122,1)",
-      "-moz-box-shadow": "0px 2px 16px -2px rgba(122,113,122,1)",
-      "box-shadow":" 0px 2px 16px -2px rgba(122,113,122,1)" }}>
+          <Layout.Footer style={{ textAlign: 'center', padding: 0, background: "white" }}>
             <Card>
               <div>
                 <h2>Learning is like rowing upstream: not to advance is to drop back.</h2>

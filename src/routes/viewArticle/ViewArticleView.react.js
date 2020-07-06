@@ -216,7 +216,7 @@ const ViewArticleView = props => {
                     <div style={{ padding: "20px" }}>
                       <div className={s.smallerHeader}>
 
-                        <a href={video.link} target="_blank" style={{ textDecoration: "none !important" }}>{video.title}</a>
+                        <a href={video.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none !important" }}>{video.title}</a>
                       </div>
                       <div className={s.paraStyle} style={{ fontWeight: "bold", fontSize: "12px" }}>
                         {video.channelTitle} &nbsp; at {new Date(video.publishedAt).toLocaleString()}

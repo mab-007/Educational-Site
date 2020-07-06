@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
-import {Redirect, NavLink} from 'react-router-dom';
 import { Menu, Layout } from "antd";
 import {
-  SettingOutlined,
   FileTextOutlined,
   WechatOutlined,
-  HomeOutlined,
-  UserOutlined,
   EditOutlined,
   RiseOutlined,
   OrderedListOutlined,
@@ -14,7 +10,7 @@ import {
 } from "@ant-design/icons";
 import s from "./App.module.css";
 
-const { Content, Sider } = Layout;
+const {  Sider } = Layout;
 
 
 function SideBar() {

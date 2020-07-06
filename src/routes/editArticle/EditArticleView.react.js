@@ -10,7 +10,7 @@ import writeIcon from "../../images/write.svg";
 import { AuthContext } from "../../App";
 import { Redirect } from "react-router-dom";
 
-const { Title } = Typography;
+//onst { Title } = Typography;
 
 const EditArticleView = props => {
 
@@ -79,7 +79,7 @@ const EditArticleView = props => {
     :
     <Card className={s.wrapper} bodyStyle={{ padding: 45 }}>
        <div style={{ position: "absolute", top: "-100px", left: "-50px" }}>
-          <img style={{ height: "250px", width: "250px" }} src={writeIcon} />
+          <img style={{ height: "250px", width: "250px" }} alt="abc" src={writeIcon} />
         </div>
       <div className={s.cardHeader}>Create or edit articles</div>
       <div className={s.cardSubHeader}>
