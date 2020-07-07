@@ -55,7 +55,7 @@ function App() {
     if (getCookie("refreshToken")) {
       if (!authData || !authData.accessToken) {
         setAuthData({ ...authData, isLoading: true })
-        fetch(`https://avab-restapi.herokuapp.com/auth/refresh`, {
+        fetch(`http://localhost:5000/auth/refresh`, {
           method: "POST",
           mode: "cors",
           headers: {

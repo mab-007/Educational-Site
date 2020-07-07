@@ -34,7 +34,7 @@ const DashboardView = props => {
 
   React.useEffect(() => {
     if (authData && authData.accessToken) {
-      fetch(`https://avab-restapi.herokuapp.com/article/`, {
+      fetch(`http://localhost:5000/article/`, {
         method: "GET",
         withCredentials: true,
         mode: "cors",
