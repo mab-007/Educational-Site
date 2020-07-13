@@ -11,6 +11,7 @@
     "antd": "^4.4.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "concurrently": "^5.2.0",
     "draft-js": "^0.11.4",
     "draftjs-to-html": "^0.9.1",
     "emailjs-com": "^2.4.1",
@@ -33,11 +34,11 @@
     "showdown": "^1.9.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start \" \"cd server && node index.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "cd server && npm install && node index.js"
+    "heroku-postbuild" : "cd server && npm install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,6 +54,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ],
-    "poroxy" : "localhost:5000"
+    "poroxy": "localhost:5000"
   }
 }
