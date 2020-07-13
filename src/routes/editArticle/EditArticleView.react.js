@@ -36,7 +36,7 @@ const EditArticleView = props => {
 
   const handleArticleSubmit = e => {
     console.log("POSTING.....");
-    fetch(`http://localhost:5000/article`, {
+    fetch(`https://avab-restapi.herokuapp.com/article`, {
       method: "POST",
       mode: "cors",
       headers: {

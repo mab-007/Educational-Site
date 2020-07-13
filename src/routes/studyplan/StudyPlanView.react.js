@@ -22,7 +22,7 @@ const StudyPlanView = props => {
         const qParams = queryString.parse(props.location.search);
         const studyPlanID = qParams.id;
         if (authData && authData.accessToken) {
-            fetch(`http://localhost:5000/studyplan/${studyPlanID}`, {
+            fetch(`https://avab-restapi.herokuapp.com/studyplan/${studyPlanID}`, {
                 mode: "cors",
                 headers: {
                     'Accept': 'application/json',
@@ -35,7 +35,7 @@ const StudyPlanView = props => {
                 .then(async data => {
                     if (data.members.indexOf(authData.user.email) == -1) window.location = "/dashboard";
                     setStudyPlan(data);
-                    const studyPlanItems = await fetch(`http://localhost:5000/studyplan/${studyPlanID}/studyPlanItems`, {
+                    const studyPlanItems = await fetch(`https://avab-restapi.herokuapp.com/studyplan/${studyPlanID}/studyPlanItems`, {
                         mode: "cors",
                         headers: {
                             'Accept': 'application/json',
@@ -57,7 +57,7 @@ const StudyPlanView = props => {
     }
 
     const handleMemberAddition = (email) => {
-        fetch(`http://localhost:5000/student/${email}`, {
+        fetch(`https://avab-restapi.herokuapp.com/student/${email}`, {
             mode: "cors",
             headers: {
                 'Accept': 'application/json',
@@ -74,7 +74,7 @@ const StudyPlanView = props => {
                 const newMemberList = studyPlan.members;
                 if (newMemberList.indexOf(data.email) == -1) newMemberList.push(data.email)
                 const newStudyPlan = { ...studyPlan, members: newMemberList }
-                const result = await fetch(`http://localhost:5000/studyplan/`, {
+                const result = await fetch(`https://avab-restapi.herokuapp.com/studyplan/`, {
                     method: "PUT",
                     mode: "cors",
                     headers: {
@@ -125,7 +125,7 @@ const StudyPlanView = props => {
             inProgressList
         }
 
-        fetch(`http://localhost:5000/studyplanitem/`, {
+        fetch(`https://avab-restapi.herokuapp.com/studyplanitem/`, {
             method: "PUT",
             mode: "cors",
             headers: {
@@ -144,7 +144,7 @@ const StudyPlanView = props => {
                 const qParams = queryString.parse(props.location.search);
                 const studyPlanID = qParams.id;
 
-                const studyPlanItems = await fetch(`http://localhost:5000/studyplan/${studyPlanID}/studyPlanItems`, {
+                const studyPlanItems = await fetch(`https://avab-restapi.herokuapp.com/studyplan/${studyPlanID}/studyPlanItems`, {
                     mode: "cors",
                     headers: {
                         'Accept': 'application/json',
@@ -200,7 +200,7 @@ const StudyPlanView = props => {
             status: "not started",
             studyPlanID: studyPlan._id
         }
-        fetch(`http://localhost:5000/studyplanitem/`, {
+        fetch(`https://avab-restapi.herokuapp.com/studyplanitem/`, {
             method: "POST",
             mode: "cors",
             headers: {
@@ -219,7 +219,7 @@ const StudyPlanView = props => {
                 const qParams = queryString.parse(props.location.search);
                 const studyPlanID = qParams.id;
 
-                const studyPlanItems = await fetch(`http://localhost:5000/studyplan/${studyPlanID}/studyPlanItems`, {
+                const studyPlanItems = await fetch(`https://avab-restapi.herokuapp.com/studyplan/${studyPlanID}/studyPlanItems`, {
                     mode: "cors",
                     headers: {
                         'Accept': 'application/json',
