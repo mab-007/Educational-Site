@@ -1,6 +1,20 @@
-![image](https://user-images.githubusercontent.com/42892285/94986590-9a237d00-057d-11eb-9d9a-6972ada35590.png)
-![image](https://user-images.githubusercontent.com/42892285/94986604-af001080-057d-11eb-9fd4-8dc970a99a8c.png)
-![image](https://user-images.githubusercontent.com/42892285/94986614-be7f5980-057d-11eb-9a1e-69b737b0b1a6.png)
+<b>Introduction</b> <br/>
+A one stop educational platform for learning Computer Science Subjects.
+
+<b>Modules</b><br/>
+<b>Teacher-Facing Side:</b> <br/>
+Create articles, view feedback, answer student question. <br/>
+Possibly even record videos or small audios explaining the concept<br/>
+<b>Student-Facing side:</b> <br/>
+Use inbuilt code editor to practice concepts and learn as said in the article<br/>
+ Use visualizer(built-in) to understand concepts.<br/>
+ Provide feedback and rate teachers/tutors, request new content.<br/>
+Leader boards for both student (performance) and tutors(ratings).<br/>
+ Links to external contests.<br/>
+ Study group creation, plan creation and remainders for the respective plan<br/>
+
+<b>Screenshots</b><br/><br/>
+
 
 
 
