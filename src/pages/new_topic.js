@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Popconfirm, Alert, Button, Form, Input, Card, Divider } from 'antd';
+import { Popconfirm, Alert, Button, Form, Input, Card, Divider, Select } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import { AuthContext } from "../App";
 import s from "./ForumDashboard.module.css";
 import writeIcon from "../images/write.svg";
 
 const { TextArea } = Input;
+const { Option } = Select;
 const NewTopic = (props) => {
     
     const authData = useContext(AuthContext);
@@ -14,6 +15,7 @@ const NewTopic = (props) => {
     const [context, setContext] = useState("");
     const [titleErr, setTitileErr] = useState("");
     const [contextErr, setContextErr] = useState("");
+    const [tags, setTags] = useState(null);
 
     const validate = () => {
         let titleErr = "";
@@ -46,7 +48,7 @@ const NewTopic = (props) => {
         
         console.log({title, context});
         if (authData && authData.accessToken) {
-            fetch(`https://avab-restapi.herokuapp.com/topics`, {
+            fetch(`http://localhost:5000/topics`, {
                 method: "POST",
                 withCredentials: true,
                 mode:"cors",
@@ -59,6 +61,7 @@ const NewTopic = (props) => {
                     title,
                     content: context,
                     author: authData.user.firstName,
+                    tags
                 })
                 })
                 .then(res => res.json())
@@ -76,7 +79,10 @@ const NewTopic = (props) => {
         }
         window.location.assign("/forum");
     }
-
+    const handleTagChange = e => {
+        setTags(e);
+    }
+    
     return (
         <React.Fragment>
             <Card bodyStyle={{ padding: 15 }} style={{width:"75vw",  margin:"45px auto"}} className={s.bodyCard}>
@@ -104,6 +110,29 @@ const NewTopic = (props) => {
                     <TextArea rows={10} onChange={e=>setContext(e.target.value)} placeholder="Write your content here." allowClear/>
                     {contextErr}
                     <br/><br/>
+                    <Select
+                        mode="multiple"
+                        placeholder="Add tags (optional)"
+                        defaultValue={null}
+                        value={tags || []}
+                        style={{ width: "100%",margin:"30px auto" }}
+                        onChange={handleTagChange}
+                    >
+                        <Option value="Genral">Genral</Option>
+                        <Option value="Contest">Contest</Option>
+                        <Option value="Dynamic Programming">Dynamic Programming</Option>
+                        <Option value="DFS">DFS</Option>
+                        <Option value="BFS" >
+                        BFS
+                    </Option>
+                        <Option value="Linked List">Linked List</Option>
+                        <Option value="Stack">Stack</Option>
+                        <Option value="Queue">Queue</Option>
+                        <Option value="Binary Search">Binary Search</Option>
+                        <Option value="Data Structures And Algorithms">Data Structures And Algorithms</Option>
+                        <Option value="Development">Development</Option>
+
+                    </Select>
                     <Popconfirm title="Are you sure？" icon={<QuestionCircleOutlined style={{ color: 'red' }} />} onConfirm={onConfirm}>
                     <Button type="submit" className="btn btn-primary" onClick={submitHandler} >Post</Button>
                     </Popconfirm>

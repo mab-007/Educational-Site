@@ -19,7 +19,6 @@ function SideBar() {
 
   useEffect(() => {
     const path = window.location.pathname;
-    console.log(path);
     switch (path) {
       case "/dashboard":
         setActiveItem("2");

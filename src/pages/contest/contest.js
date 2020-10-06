@@ -57,7 +57,7 @@ const Contest = props => {
         let x = null;
         let y = null, z = null;
         console.log('Fetching...');
-        fetch(`https://avab-restapi.herokuapp.com/data/2`)
+        fetch(`http://localhost:5000/data/2`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -114,7 +114,7 @@ const Contest = props => {
         console.log('Fetching...');
         console.log(e);
         const qParams = e;
-        fetch(`https://avab-restapi.herokuapp.com/data/${qParams}`)
+        fetch(`http://localhost:5000/data/${qParams}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

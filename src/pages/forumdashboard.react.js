@@ -26,7 +26,7 @@ const ForumDashboard = props => {
   React.useEffect(() => {
     console.log("FETCHING");
     //if (authData && authData.accessToken) {
-      fetch(`https://avab-restapi.herokuapp.com/topics`, {
+      fetch(`http://localhost:5000/topics`, {
         method:"GET",
         withCredentials: true,
         mode:"cors",
@@ -154,12 +154,27 @@ const ForumDashboard = props => {
                         >
                           {post.author || "Cormen Stein"}
                         </div>
-                          <span style={{ fontWeight: 500 }}>Tags : </span>
+                         {/* <span style={{ fontWeight: 500 }}>Tags : </span>
                           <span>
                           <span className={s.tagSpan}>
                             {tags[(idx + 2) % tags.length]}
                         </span>
                           <span className={s.tagSpan}>{tags[idx]}</span>
+                        </span>*/}
+                        {post.tags && post.tags.length ? <span style={{ fontWeight: 500 }}>Tags : </span> : null}
+                        <span>
+                          {
+                            post.tags && post.tags.map(
+                              tag => {
+                                return (
+                                  <span className={s.tagSpan}>
+                                    {tag}
+                                  </span>
+                                )
+                              }
+                            )
+                          }
+
                         </span>
                       </Col>
 

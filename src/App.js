@@ -55,7 +55,7 @@ function App() {
     if (getCookie("refreshToken")) {
       if (!authData || !authData.accessToken) {
         setAuthData({ ...authData, isLoading: true })
-        fetch(`https://avab-restapi.herokuapp.com/auth/refresh`, {
+        fetch(`http://localhost:5000/auth/refresh`, {
           method: "POST",
           mode: "cors",
           headers: {
@@ -110,7 +110,7 @@ function App() {
       <Layout style={{ minHeight: "100vh" }} >
       <SideBar/>
       <Layout style={{ padding: "0px" }}>
-        <Layout.Header className={`site-layout-sub-header-background ${s.navbar}`} style={{ padding: 0, background:"#1890ff", color:"white",
+        <Layout.Header className={`site-layout-sub-header-background ${s.navbar}`} style={{ padding: 0, background:"#1890ff", color:"black",
       "WebkitBoxShadow": "0px 2px 16px -2px rgba(122,113,122,1)",
       "MozBoxShadow": "0px 2px 16px -2px rgba(122,113,122,1)",
       "boxShadow":" 0px 2px 16px -2px rgba(122,113,122,1)" }} fixed = "true">
@@ -122,7 +122,7 @@ function App() {
                 <a className="ant-dropdown-link" onClick={e => window.location="/"}>
                   {'Home'}
                 </a>
-              </Dropdown>{' '}&nbsp;&nbsp;&nbsp;&nbsp;
+              </Dropdown>{/*{' '}&nbsp;&nbsp;&nbsp;&nbsp;
               <Dropdown overlay={menu2} >
                 <a className="ant-dropdown-link" onClick={e => window.location="/dashboard"}>
                   {'Dashboard'} <DownOutlined />
@@ -137,7 +137,7 @@ function App() {
                 <a className="ant-dropdown-link" onClick={e => window.location="/contest"}>
                   {'Contests'}
                 </a>
-              </Dropdown>{' '}&nbsp;&nbsp;&nbsp;&nbsp;
+              </Dropdown>*/}{' '}&nbsp;&nbsp;&nbsp;&nbsp;
               <Dropdown overlay={menu1}>
               <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                 {`Welcome, ${authData.user.firstName}`} <DownOutlined />

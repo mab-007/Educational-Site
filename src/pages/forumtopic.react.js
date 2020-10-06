@@ -19,7 +19,7 @@ const Forumtopic = props => {
     React.useEffect(() => {
         const qParams = queryString.parse(props.location.search);
         if (authData && authData.accessToken) {
-            fetch(`https://avab-restapi.herokuapp.com/topics/${qParams.id}`, {
+            fetch(`http://localhost:5000/topics/${qParams.id}`, {
                 method:"GET",
                 withCredentials: true,
                 mode:"cors",
@@ -30,7 +30,7 @@ const Forumtopic = props => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data.comm);
+                //console.log(data.comm);
                 setCommPost(data.comm);
                 setTopic(data);
             })
@@ -53,10 +53,10 @@ const Forumtopic = props => {
         ];
 
         const handleSubmit = () => {
-            console.log(comm);
+            //console.log(comm);
             const qParams = queryString.parse(props.location.search);
             if (authData && authData.accessToken) {
-                fetch(`https://avab-restapi.herokuapp.com/topics/${qParams.id}`, {
+                fetch(`http://localhost:5000/topics/${qParams.id}`, {
                     method: "POST",
                     withCredentials: true,
                     mode:"cors",
@@ -66,7 +66,7 @@ const Forumtopic = props => {
                         "Authorization": `JWT ${authData.accessToken}`
                     },
                     body: JSON.stringify({
-                        author: "Jason",
+                        author: authData.user,
                         comm,
                     })
                 })
@@ -82,7 +82,7 @@ const Forumtopic = props => {
         
         const allComment = () => {
             const qParams = queryString.parse(props.location.search);
-            fetch(`https://avab-restapi.herokuapp.com/topics/${qParams.id}`, {
+            fetch(`http://localhost:5000/topics/${qParams.id}`, {
                 method:"GET",
                 withCredentials: true,
                 mode:"cors",
